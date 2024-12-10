@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motivasi Kocak</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        text-align: center;
+    }
+    .quote-box {
+        display: none;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        animation: pop 0.6s ease-out forwards;
+    }
+    @keyframes pop {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        80% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    button {
+        background: #ffffff;
+        color: #2575fc;
+        border: none;
+        border-radius: 25px;
+        padding: 15px 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    button:active {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+<body>
+
+<h1>:v </h1>
+<p>Hallo! Klik tombol di bawah ini!</p>
+<button onclick="showQuote()">Klik ini :)</button>
+<div id="quote" class="quote-box"></div>
+
+<script>
+    const quotes = [
+        "Kerja keras itu seperti kopi, awalnya pahit, lama-lama kalau nggak suka ya tetap pahit.",
+        "Kalau capek rebahan terus, coba berdiri. Siapa tahu hidupmu ikutan bangkit.",
+        "Motivasi terbesar itu bukan orang lain, tapi tagihan listrik akhir bulan.",
+        "Jangan cuma wacana, sukses butuh rencana. Ya minimal bangun pagi dulu deh.",
+        "Mimpi besar itu gratis, tapi alarm pagi tetap nyala buat kerja keras.",
+        "Malas hari ini, lapar besok hari. Simple."
+    ];
+
+    function showQuote() {
+        const quoteBox = document.getElementById('quote');
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteBox.textContent = randomQuote;
+        quoteBox.style.display = 'block';
+        quoteBox.style.animation = 'none'; // Reset animation
+        setTimeout(() => quoteBox.style.animation = '', 10); // Trigger animation
+    }
+</script>
+
+</body>
+</html>
