@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Whatsup</title>
+<title>Whatsup</title>
 <style>
     body {
         font-family: 'Arial', sans-serif;
@@ -17,6 +17,10 @@
         background: linear-gradient(135deg, #6a11cb, #2575fc);
         color: #fff;
         text-align: center;
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
     }
     .quote-box {
         display: none;
@@ -50,6 +54,7 @@
         cursor: pointer;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         transition: transform 0.2s, box-shadow 0.2s;
+        margin-top: 20px;
     }
     button:hover {
         transform: translateY(-3px);
@@ -59,23 +64,35 @@
         transform: translateY(0);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
+    footer {
+        position: fixed;
+        bottom: 10px;
+        font-size: 1rem;
+        color: #fff;
+        opacity: 0.8;
+    }
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
 </style>
 </head>
 <body>
 
 <h1>:v </h1>
-<p>Hallo! Klik tombol di bawah ini!</p>
-<button onclick="showQuote()">Klik ini :)</button>
+<p>Hallo! Klik tombol di bawah ini! 😄🚀</p>
+<button onclick="showQuote()">Klik ini! ✨</button>
 <div id="quote" class="quote-box"></div>
 
 <script>
     const quotes = [
-        "Motivasi terbesar itu bukan orang lain, tapi tagihan listrik akhir bulan.",
-        "Kerja keras itu seperti kopi, awalnya pahit, lama-lama kalau nggak suka ya tetap pahit.",
-        "Kalau capek rebahan terus, coba berdiri. Siapa tahu hidupmu ikutan bangkit.",
-        "Jangan cuma wacana, sukses butuh rencana. Ya minimal bangun pagi dulu deh.",
-        "Mimpi besar itu gratis, tapi alarm pagi tetap nyala buat kerja keras.",
-        "Malas hari ini, lapar besok hari. Simple."
+        "Motivasi terbesar itu bukan orang lain, tapi tagihan listrik akhir bulan. ⚡💸",
+        "Kerja keras itu seperti kopi, awalnya pahit, lama-lama kalau nggak suka ya tetap pahit. ☕🤨",
+        "Kalau capek rebahan terus, coba berdiri. Siapa tahu hidupmu ikutan bangkit. 💪😎",
+        "Jangan cuma wacana, sukses butuh rencana. Ya minimal bangun pagi dulu deh. 🌅💭",
+        "Mimpi besar itu gratis, tapi alarm pagi tetap nyala buat kerja keras. ⏰💥",
+        "Malas hari ini, lapar besok hari. Simple. 😴➡️😤"
+        
     ];
 
     function showQuote() {
@@ -87,6 +104,10 @@
         setTimeout(() => quoteBox.style.animation = '', 10); // Trigger animation
     }
 </script>
+
+<footer>
+    <p>Created by <a href="#">Naufal Maulana, orang yang ingin mengubah dunia dengan kata-kata, tapi kadang bingung mau ngomong apa</a> 😜</p>
+</footer>
 
 </body>
 </html>
